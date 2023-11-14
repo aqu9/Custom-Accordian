@@ -12055,17 +12055,5 @@ const CustomAccordian = (props) => {
             }) }) }));
 };
 
-const App = () => {
-    const [count, setCount] = useState(0);
-    return (jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [jsxRuntimeExports.jsxs("div", { style: {
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    height: "100vh",
-                    gap: 5,
-                }, children: [jsxRuntimeExports.jsx("button", { onClick: () => setCount(count + 1), children: "click me and icrease count" }), jsxRuntimeExports.jsx("h1", { children: count }), jsxRuntimeExports.jsx("button", { onClick: () => setCount(0), children: "click me and Reset count" })] }), jsxRuntimeExports.jsx(CustomAccordian, { data: {} })] }));
-};
-
-export { App, CustomAccordian, CustomAccordian as default };
+export { CustomAccordian, CustomAccordian as default };
 //# sourceMappingURL=index.js.map
