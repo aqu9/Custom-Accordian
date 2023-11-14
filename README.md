@@ -1,46 +1,134 @@
-# Getting Started with Create React App
+# Custom Accordian
+create a accordian on the go by just passing JSON
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ # Installation
 
-## Available Scripts
+`npm i custom-accordian`
 
-In the project directory, you can run:
+Then ...
 
-### `npm start`
+```
+const data = {
+  Header1: {
+    accordianContent: [
+      {
+        title: "Header1 Content 1",
+      },
+    ],
+  },
+  Header2: {
+    accordianContent: [
+      {
+        title: "Haeder2 Content 1",
+      },
+      {
+        title: "Haeder2 Content 2",
+      },
+    ],
+  },
+};
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+import {  CustomAccordian } from "custom-accordian";
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<CustomAccordian
+    data={data}
+    bgColor="#333333"
+    headerBgColor="lightblue"
+    fontSize="15px"
+    lineColor="blue"
+    color="yellow"
+    headerHeight="28px"
+/>
+```
 
-### `npm test`
+![image](https://github.com/aqu9/Custom-Accordian/assets/67313757/ae8d8d2b-e705-4cd7-87c9-9c210af157b7)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Nested Accordian
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+const nested_data = {
+  Header1: {
+    accordianContent: [
+      {
+        title: "Header1 Content 1",
+      },
+      {
+        title: "Header1 content 2",
+        isChildren: true,
+        children: {
+          child1: {
+            accordianContent: [
+              {
+                title: "child 1 content 1",
+              },
+              {
+                title: "child 1 content 2",
+              },
+              {
+                title: "child 1 content 3",
+              },
+            ],
+          },
+          child2: {
+            accordianContent: [
+              {
+                title: "child 2 content 1",
+              },
+            ],
+          },
+        },
+      },
+      {
+        title: "Header1 content 3",
+      },
+    ],
+  },
+  Header2: {
+    accordianContent: [
+      {
+        title: "Haeder2 Content 1",
+        component: <div>Component</div>,
+      },
+      {
+        title: "Haeder2 Content 2",
+      },
+    ],
+  },
+};
+```
 
-### `npm run eject`
+```
+import {  CustomAccordian } from "custom-accordian";
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<CustomAccordian
+    data={nested_data}
+    bgColor="#333333"
+    headerBgColor="lightblue"
+    fontSize="15px"
+    lineColor="blue"
+    color="yellow"
+    headerHeight="28px"
+/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+![image](https://github.com/aqu9/Custom-Accordian/assets/67313757/99a1cb9c-0f96-4686-a64d-9691e149e68a)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Props options
+* *data* - JSON
+* *bgColor* - string
+* *headerBgColor* - string
+* *fontsize* - string
+* *fontWeight* - string | number
+* *lineColor* - string
+* *color* - string
+* *headerHeight* - string
+* *removeIcon* - react componnet
+* *addIcon* - react component
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
