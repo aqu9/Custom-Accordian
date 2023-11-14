@@ -1,0 +1,22 @@
+{
+    "name": "ICE-2.0 Forms Docs",
+    "$schema": "https://typedoc.org/schema.json",
+    "includes": "src/",
+    "entryPoints": ["src/typeDoc.ts"],
+    "out": "docs",
+    "theme": "default",
+    "tsconfig": "./tsconfig.json",
+    "readme": "./README.md",
+    "searchInComments": true,
+    "plugin": [
+        "typedoc-plugin-versions",
+        "typedoc-plugin-extras",
+        "typedoc-plugin-clarity",
+        "typedoc-plugin-coverage",
+        "typedoc-plugin-mdn-links",
+        "typedoc-plugin-merge-modules"
+    ],
+    "versions": "1.0.0",
+    "customTitle": "ICE v2.0 Forms Documentation",
+    "footerDate": true,
+}
