@@ -1,3 +1,4 @@
 import App from "./App";
-export default App;
-export { App };
+import CustomAccordian from "./components/Accordian";
+export default CustomAccordian;
+export { App, CustomAccordian };
