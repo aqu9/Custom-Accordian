@@ -1,2 +1,0 @@
-import e,{useState as t}from"react";var n=function(){var n=t(0),c=n[0],r=n[1];return e.createElement("div",{style:{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",height:"100vh",gap:5}},e.createElement("button",{onClick:function(){return r(c+1)}},"click me and icrease count"),e.createElement("h1",null,c),e.createElement("button",{onClick:function(){return r(0)}},"click me and Reset count"))};export{n as App,n as default};
-//# sourceMappingURL=index.js.map
