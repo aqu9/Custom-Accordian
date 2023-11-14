@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var jsxRuntime = {exports: {}};
 
 var reactJsxRuntime_production_min = {};
@@ -4164,6 +4160,5 @@ const App = () => {
         }, children: [jsxRuntimeExports.jsx("button", { onClick: () => setCount(count + 1), children: "click me and icrease count" }), jsxRuntimeExports.jsx("h1", { children: count }), jsxRuntimeExports.jsx("button", { onClick: () => setCount(0), children: "click me and Reset count" })] }));
 };
 
-exports.App = App;
-exports.default = App;
+export { App, App as default };
 //# sourceMappingURL=index.js.map
